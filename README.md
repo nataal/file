@@ -24,7 +24,7 @@
 - AWS_SES_SECRET_KEY
 
 
-### DJANGO CONFIGURATION KEYS
+### DJANGO CONFIGURATION KEYS : Mettre à jour le fichier .env.sh
 - SECRET_KEY
 - database_name
 - database_password
@@ -37,7 +37,7 @@
 
 ## Etapes de déploiement :
 
-- Définir les variables d'environnement
-- Installer les dépendances : pip3 install -r requirements.txt
-- Initialiser la base de données : python3 manage.py migrate
-- Lancer le serveur
+- Définir les variables d'environnement : `source .env.sh`
+- Installer les dépendances : `pip3 install -r requirements.txt`
+- Initialiser la base de données : `python3 manage.py migrate`
+- Lancer le serveur: Nous recommandons `gunicorn`
