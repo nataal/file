@@ -1,0 +1,6 @@
+<h3>Confirmation de suppression</h3>
+
+<form action="{% url 'supprimer_entreprise_interv' object.uuid %}"  method="post">{% csrf_token %}
+    <p>Voulez-vous vraiment supprimer l'entreprise intervenante {{ object }}?</p>
+    <input type="submit" value="Enregistrer">
+</form>

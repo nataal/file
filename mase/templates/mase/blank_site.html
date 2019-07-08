@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<!-- Mirrored from mvcsoftonline.com/html/wimax/index-three.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Mar 2018 23:19:46 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/apple-favicon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+    <title>MASE Sénégal</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- Responsive stylesheet  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+    <!-- Bootstrap Dropdown Hover CSS -->
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-dropdownhover.css' %}" rel="stylesheet">
+    {% block css_supp %} {% endblock %}
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Start -->
+    <header class="main-navbar">
+        <div class="topbar-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 center767">
+                      <ul class="topbar-info">
+                          <li><p>+221 77 308 74 66</p></li>
+                          <li><p><a href="#">contact@mase.sn</a></p></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 center767">
+                    <div class="social-icon clearfix">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- Header navbar start -->
+        <div class="header-navbar" id="navbar-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo/logo.png' %}" alt="" style="height: 60px; width: 100px;">
+                                </a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInRight">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li id="li_accueil"><a href="{% url 'home' %}">Accueil</a>
+                                    <li class="dropdown" id='li_about'>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Qui sommes-nous? <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown"><a href="#">MASE c'est quoi?</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="{% url 'presentation' %}">Présentation</a></li>
+                                                    <li><a href="{% url 'historique' %}">Historique</a></li>
+                                                    <li><a href="{% url 'certification' %}">Processus de certification</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- <li><a href="presentation_general.html">MASE c'est quoi?</a></li> -->
+                                            <!-- <li class="dropdown"><a href="">MASE Sénégal</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="">Création</a></li>
+                                                    <li><a href="">Conseil d'Administration</a></li>
+                                                    <li><a href="">Partenariats</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="{% url 'maseSenegal' %}">MASE Sénégal </a></li>
+                                            <!-- <li class="dropdown"><a href="">Adhésions</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="">Conditions</a></li>
+                                                    <li><a href="">Formulaires EU et UI</a></li>
+                                                    <li><a href="">Liste des EU et UI</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="{% url 'adhesions' %}">Adhésions</a></li>
+                                            <li><a href="{% url 'cabinets' %}">Cabinets d'audits et auditeurs agréés</a>
+                                            </li>
+                                            <li><a href="{% url 'centres_formations' %}">Centres de formation agréés</a></li>
+                                            <li><a href="{% url 'liste_formations' %}">Base Form</a></li>
+                                            <li><a href="{% url 'veille_reglementaire' %}">Veille réglémentaire</a></li>
+                                            <li><a href="{% url 'liste_documents' %}">Documentation</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="li_activites"><a href="{% url 'activites' %}">Activités</a></li>
+                                    <!-- <li class="dropdown" id='li_activites'>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activités<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="">Assemblée générale constitutive</a></li>
+                                            <li><a href="">Conseils d'administration</a></li>
+                                            <li><a href="">Ateliers de formation des cohortes</a></li>
+                                            <li><a href="">Atelier avec le GPP</a></li>
+                                            <li><a href="">Atelier avec le CNP</a></li>
+                                            <li><a href="">Forum de l'ARA</a></li>
+                                            <li><a href="">Atelier avec la chambre des mines</a></li>
+                                            <li><a href="">Ateliers avec le Conseil National des <br>Artisans du Sénégal</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Référentiels <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="{% static 'Referentiel 2014.pdf' %}" target="_blank">Français</a>
+                                            </li>
+                                            <li><a href="{% static 'Mase-english.pdf' %}" target="_blank">Anglais</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="{% static 'Référentiel 2014.pdf' %}" target="_blank">Référentiels</a></li> -->
+                                    <li id='li_contact'><a href="{% url 'contact' %}">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content Start -->
+    {% block content %}
+    {% endblock %}
+    <!-- Content end -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="footer-col about">
+                        <h3>MASE <span>Sénégal</span></h3>
+                        <p>Amélioration des performances Sécurité Santé Environnement des entreprises</p>
+                        <ul>
+                            <li>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Réidence ASDI appartement B1, SICAP Amitié 3 N° 4421 Dakar
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                mbareck.diop@mase-asso.fr
+                            </li>
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                +221 77 633 34 12
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="footer-col newsletter">
+                        <h3><span>Réseaux</span> Sociaux</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="footer-col links">
+                        <h3>Liens <span>Utiles</span></h3>
+                        <ul>
+                            <li><a href="http://www.mase-asso.fr/">MASE</a></li>
+                            <li><a href="http://mase-mediterranee.com/">MASE Méditerranée</a></li>
+                            <li><a href="http://www.mase.ci/">MASE Côte d'Ivoire</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-col twitter">
+                        <h3>Recent Tweets</h3>
+                        <div class="twitter-box">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <p><a href="#">@Company Name</a> It is a long established fact that a reader. <br> <a href="#">20 August, 2018</a></p>
+                        </div>
+                        <div class="twitter-box">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <p><a href="#">@Company Name</a> It is a long established fact that a reader. <br> <a href="#">20 August, 2018</a></p>
+                        </div>
+                        <div class="twitter-box">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <p><a href="#">@Company Name</a> It is a long established fact that a reader. <br> <a href="#">20 August, 2018</a></p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Start -->
+    <section class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>©2018.<a href="" target="_blank"> Diambars Tech.</a> Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Min js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- bootstrap-dropdownhover js -->
+    <script src="{% static 'js/bootstrap-dropdownhover.min.js' %}"></script>
+    <!-- imagesloaded JS -->
+    <script src="{% static 'js/imagesloaded.min.js' %}"></script>
+    <!-- filterizr JS -->
+    <script src="{% static 'js/jquery.filterizr.min.js' %}"></script>
+    <!-- typing js -->
+    <script src="{% static 'js/typing.js' %}"></script>
+    <!-- VideoPopUp -->
+    <script src="{% static 'js/VideoPopUp.jquery.js' %}"></script>
+    <!-- counterup -->
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <!-- waypoints -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <!-- carousel -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- jarallax -->
+    <script src="{% static 'js/jarallax.min.js' %}"></script>
+    <!-- lightbox -->
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <!-- youtubebackground JS -->
+    <script src="{% static 'js/jquery.youtubebackground.js' %}"></script>
+    <!-- jquery scrollUp  JS -->
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <!-- wow.min JS -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Main Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    {% block js_supp %}{% endblock%}
+
+</body>
+
+
+<!-- Mirrored from mvcsoftonline.com/html/wimax/index-three.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Mar 2018 23:20:57 GMT -->
+</html>

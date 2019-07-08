@@ -1,0 +1,6 @@
+<h3>Confirmation de suppression</h3>
+
+<form action="{% url 'supprimer_intervenant' object.code %}" method="post">{% csrf_token %}
+    <p>Voulez-vous vraiment supprimer l'intervenant {{ object }}?</p>
+    <input type="submit" value="Confirmer">
+</form>

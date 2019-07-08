@@ -1,0 +1,243 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block css_supp %}
+    <style type="text/css">
+        .testimonial-item {
+            padding-left: 70px;
+        }
+        .testimonial-item:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-top: none;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            transform: rotate(-45deg);
+            transform-origin: 80% -30% 0;
+        }
+        .groupe1 {
+            border: 2px solid #0C94B8;
+        }
+        .groupe1:before {
+            border-top: 40px solid #0C94B8;
+        }
+        .groupe2:before {
+            border-top: 40px solid #7000FF;
+        }
+        .groupe2 {
+            border: 2px solid #7000FF;
+        }
+        .groupe3 {
+            border: 2px solid #4BAC2D;
+        }
+        .groupe3:before {
+            border-top: 40px solid #4BAC2D;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<!-- Page Title bar -->
+    <section class="defult-page-title overlay-black">
+      <div class="container clearfix">
+          <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div class="page-title-box center991">
+                      <div class="page-title-content">
+                        <h2>MASE <span>Sénégal</span></h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- About two Start -->
+    <section class="about-area-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col-two">
+                        <h3>Objet</h3>
+                        <p>L’association Mase Sénégal a pour but de promouvoir le développement dans les entreprises extérieures d’un système formalisé de gestion de la sécurité et d’organiser la reconnaissance de ce système au moyen d’une certification unique fondée sur le référentiel “ Mase ” (Manuel d’Amélioration Sécurité, Santé, Hygiène et Environnement Entreprises). </p>
+                        <h3>Création</h3>
+                        <p>C’est en 2014, à la création du Clubster Sénégal Afrique de l’Ouest, une Association entre les entreprises de la région Nord – Pas- de Calais et celles du Sénégal soutenue par le Conseil régional et Lille Métropole dans le cadre du Co-développement, visant l’emploi des jeunes et le partenariat gagnant gagnant entre entreprises françaises et sénégalaises, que l’idée d’apporter aux entreprises sénégalaises une expertise dans certains domaines dont celui de la Sécurité, est née l’idée de créer un MASE Sénégal pour répondre à cette préoccupation. </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col-two">
+                      <img src="{% static 'images/bg/5.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About three Start -->
+    <section class="about-area-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="about-col-three">
+                        <p>Plusieurs missions ont été organisées au Sénégal pour la sensibilisation des Autorités et des entreprises avec la participation notamment de l’Administrateur MASE Nord Pas de Calais Picardie (N2P), Monsieur Pierre ROUSSEL, du Vice-Président de MASE national français, Monsieur François Yves JOLIBOIS, et de deux Auditeurs MASE N2P, Messieurs Benoit DRELON et Jean Christophe CHELLE. </p>
+                        <p>Au cours de ces missions de sensibilisation des autorités et des entreprises sénégalaises, il a été noté un grand intérêt au cours des rencontres avec le CNP, le SPEBTPS, le CSFP-BTP, le Ministère du travail, la Brigade nationale des Sapeurs-Pompiers, la Caisse nationale de Sécurité sociale, l’Association des Bureaux d’études (EPICS), la SOCOCIM, Eiffage Sénégal, TOTAL Sénégal.</p>
+                        <p>C’est ainsi qu’au cours d’une réunion suivie d’un dîner au restaurant La Calebasse le 18/02/2016 qui a vu la participation d’une vingtaine d’entreprises utilisatrices et intervenantes il a été décidé de créer MASE Sénégal par une Assemblée générale constitutive tenue le 23 Mai 2016 au siège de TOTAL Sénégal. Par ailleurs au cours du Séminaire technique organisé par la Caisse de Sécurité sociale et l’Association internationale de la Sécurité sociale organisée à Dakar, au King Fahd les 12 et 13 avril 2016 sur le thème : « Les mesures de prévention dans le milieu de travail : vers une culture de prévention », un exposé sur le MASE a été fait devant plus de 150 Délégués venus du Sénégal et de plusieurs pays africains. </p>
+                        <p>De toutes ces démarches de sensibilisation, il est ressorti le besoin de créer un MASE au Sénégal pour diminuer les accidents au travail à travers une démarche pratique et simple comme cela a été prouvé en France depuis 20 ans avec une division du taux d’accidents par 3 dans les 10 dernières années pour les entreprises certifiées MASE au moins pour une période de deux à trois fois 3 ans. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About four Start -->
+    <section class="about-area-four">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="about-col-four">
+                        <h3>Organisation</h3>
+                        <p>Le premier Conseil d’administration s’est tenu le 22 juillet 2016 à la SAR, suivi d’une conférence de presse. Un conseil se tient tous les 6 mois.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-col">
+                        <div class="row">
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                   Président : Société africaine de Raffinage
+                                </p>
+                                <h3 class="title">Daouda KEBE </h3>
+                                <small class="post">Chef de Département Exploitation</small>
+                            </div>
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                    Vice-Président : JADE Afrique
+                                </p>
+                                <h3 class="title">François Yves JOLIBOIS</h3>
+                                <small class="post">Directeur Général</small>
+                            </div>
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                    Secrétaire général : SENSTOCK
+                                </p>
+                                <h3 class="title">Boubacar CAMARA</h3>
+                                <small class="post">Coordonateur HSE</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                   Trésorier : SOCOCIM
+                                </p>
+                                <h3 class="title">Dr Marième NDOUR DIALLO</h3>
+                                <small class="post">Docteur</small>
+                            </div>
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                  Administrateur
+                                </p>
+                                <h3 class="title">Colonel Mbareck DIOP </h3>
+                                <small class="post"></small>
+                            </div>
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe1" style="margin-left: 70px;">
+                                <p class="description">
+                                   Secrétaire permanente
+                                </p>
+                                <h3 class="title">Sokhna DIALLO DEME</h3>
+                                <small class="post"></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="testimonial-item col-md-3 col-sm-10 groupe2" style="margin-left: 70px;">
+                                <p class="description">
+                                   Comité de Pilotage
+                                </p>
+                                <h3 class="title"></h3>
+                                <small class="post"></small>
+                            </div><div class="testimonial-item col-md-3 col-sm-10 groupe3" style="margin-left: 70px;">
+                                <p class="description">
+                                  Auditeurs
+                                </p>
+                                <h3 class="title"></h3>
+                                <small class="post"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Style Five -->
+    <section class="client-style-five">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Partenaraires MASE SENEGAL</h2>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <div class="client-carousel">
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo_css.gif' %}" alt="Caisse de Sécurité Sociale">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo_cnp.png' %}" alt="Caisse National du Patronat du Sénégal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Partenaraires RESEAU MASE</h2>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <div class="client-carousel">
+                        <div class="item">
+                            <img src="{% static 'images/logo/BeSaCC.png' %}" alt="BeSaCC">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/OPPBTP.jpg' %}" alt="OPPBTP">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/S3C.jpg' %}" alt="S3C">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/SCC.jpg' %}" alt="SCC">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/SNCT.jpg' %}" alt="SNCT">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/UFIP.jpg' %}" alt="UFIP">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/UIC.jpg' %}" alt="UIC">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/VCA.png' %}" alt="VCA">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>
+
+{% endblock %}
+
+{% block js_supp %}
+	<script type="text/javascript">
+		$(function() {
+			$('#li_about').addClass('active');
+		});
+	</script>
+{% endblock %}

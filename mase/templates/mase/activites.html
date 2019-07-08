@@ -1,0 +1,64 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Title bar -->
+<section class="defult-page-title overlay-black">
+	<div class="container clearfix">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="page-title-box center991">
+					<div class="page-title-content">
+					<h2><span>Activités</span></h2>
+						<!-- <p><a href="index-one.html">Home</a> / <a href="#">Testimonial</a></p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- TActivités -->
+<section class="testimonial-style-one">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2></h2>
+				</div>
+			</div>
+		</div> 
+		<div class="row"> 
+			<div class="col-lg-4 col-md-4 col-sm-6 column-margin">
+				{% for event in object_list %}
+				<div class="testimonial-box">
+					<!--<img src="{% static 'images/team/1.jpg' %}" alt="">-->
+					<h4>{{ event.nom }}</h4>
+					<h5>{{ event.date|date:'d-m-Y' }}</h5>
+					<p>{{ event.description }}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>     
+	</div>      
+</section>
+{% endblock %}
+{% block js_supp %}
+<script type="text/javascript">
+	$(function() {
+		$('#li_activites').addClass('active');
+	});
+</script>
+{% endblock %}
+
+{% block css_supp %}
+<style type="text/css">
+	.testimonial-box img {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 100px;
+	    width: 100px;
+	    border-radius: 0%;
+	}
+</style>
+{% endblock %}

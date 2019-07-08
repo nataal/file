@@ -1,0 +1,96 @@
+{% extends 'mase/blank_site.html' %}
+
+{% load static %}
+
+{% block content %}
+ <!-- Page Title bar -->
+    <section class="defult-page-title overlay-black">
+      <div class="container clearfix">
+          <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div class="page-title-box center991">
+                      <div class="page-title-content">
+                        <h2><span>Contactez-</span> Nous</h2>
+                        <!-- <p><a href="index-one.html">Home</a> / <a href="#">Contact</a></p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <div id="map" style="width:100%;height:400px;"></div>
+
+    <!-- Contact Start -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-col contact-infobox">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <p>mbareck.diop@mase-asso.fr</p>
+                        <p>madiallob@gmail.com)</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-col contact-infobox">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+221 77 633 34 12</p>
+                        <p>+221 77 134 45 96</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-col contact-infobox">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Adresse: Réidence ASDI appartement B1, SICAP Amitié 3 N° 4421 Dakar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row contact-form-row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="contact-col">
+                            <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycbxvEgzmt0M4PZQPVvp7X0kKL9q4v4xfu6ORjp_W54mWua5fwiMR/exec">
+                                <div class="col-md-6">
+                                    <input type="text" name="nom" id="name" class="form-control" placeholder="Votre nom" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Votre email"  required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" name="objet" class="form-control" placeholder="Objet" id="subject" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="contact-textarea">
+                                        <textarea class="form-control" rows="6" placeholder="Ecrivez votre message" id="message" name="message" required></textarea>
+                                        <button class="btn btn-default my-btn text-center" type="submit" value="Submit Form">Envoyer</button>
+                                    </div>
+                                </div>
+                                <!-- <div id="form-messages"></div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="contact-col">
+                        <img src="{% static 'images/contact.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js_supp %}
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#li_contact').addClass('active');
+		});
+	</script>
+	<!-- Map API Key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC9sj8gy6SzWxRWEMvzIKMj_TnUys_1IQ&amp;callback=initMap"
+            type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'js/map.js' %}"></script>
+{% endblock %}

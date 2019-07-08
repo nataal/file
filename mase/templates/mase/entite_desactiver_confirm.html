@@ -1,0 +1,5 @@
+<form action="{% url 'desactiver_entite' entite.pk %}" method="post">
+    {% csrf_token %}
+    <p>Voulez-vous vraiment désactiver {{ entite.nom }} ?</p>
+    <input type="submit" value="Confirmer">
+</form>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% load widget_tweaks %}
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/apple-favicon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+    <title>MASE Sénégal - Connexion</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/lib/stroke-7/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/lib/jquery.nanoscroller/css/nanoscroller.css' %}"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" type="text/css"/>
+    <style type="text/css">
+        .login100-form-title {
+            margin-top: -30px;
+        }
+        .wrap-login100 {
+            width: 400px !important;
+            background-color: #fff !important;
+        }
+
+    </style>
+</head>
+<body class="am-splash-screen">
+<div class="limiter">
+    <div class="container-login100" style="background: url('{% static 'images/bg/bg1.jpg' %}') no-repeat center center fixed !important;  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.85">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" action="{% url 'connexion' %}" method="post">{% csrf_token %}
+                <span class="login100-form-title p-b-26" style="font-size: 20px;">
+                    <img src="{% static 'images/logo/Logos/logo_mase.png' %}" alt="logo"
+                    class="logo-img"> Base Form
+                </span>
+                <span class="login100-form-title p-b-48">
+                    <i class="zmdi zmdi-font"></i>
+                </span>
+                <br>
+                <br>
+                <span style="text-align:center; margin-left:5px;">Veuillez entrer vos paramètres de connexion</span>
+                <br> <br><br>
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="input100" type="text" name="{{ form.username.name }}" placeholder="Email">
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    <input class="input100" type="password" name="{{ form.password.name }}" placeholder="Mot de Passe">
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Se connecter
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group footer row">
+                    <div class="col-xs-6"><a href="{% url 'password_reset' %}">Mot de passe oublié?</a></div>
+                   <!--  <div class="col-xs-6 remember">
+                        <label for="remember">Se rappeler de moi</label>
+                        <div class="am-checkbox">
+                            <input type="checkbox" id="remember" class="needsclick">
+                            <label for="remember"></label>
+                        </div>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'assets/lib/jquery/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/main.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/lib/bootstrap/dist/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	//initialize the javascript
+    	App.init();
+    });
+
+
+</script>
+</body>
+</html>

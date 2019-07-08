@@ -1,0 +1,16 @@
+{% extends 'mase/blank_dashboard.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form action="{% url 'supprimer_document' object.uuid %}" method="post">{% csrf_token %}
+                <p>Voulez vous vraiment supprimer le document {{ object }} ?</p>
+                <input type="submit" value="Supprimer">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

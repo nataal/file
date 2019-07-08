@@ -1,0 +1,24 @@
+{% extends 'mase/blank_dashboard.html' %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content_title %}
+Formateur
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form action="{% url 'supprimer_utilisateur' object.pk %}" method="post">{% csrf_token %}
+                    <p>Voulez-vous vraiment supprimer l'utilisateur {{ object }} ?</p>
+                    <p>PS: Sa structure sera aussi supprimée.</p>
+                    <input type="submit" value="Confirmer">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

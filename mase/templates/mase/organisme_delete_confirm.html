@@ -1,0 +1,6 @@
+<h4>Confirmation de suppression</h4>
+
+<form action="{% url 'supprimer_organisme' object.uuid %}" method="post">{% csrf_token %}
+    <p>Voulez-vous vraiment supprimer l'organisme de formation: {{ object }} ?</p>
+    <input type="submit" value="Confirmer">
+</form>

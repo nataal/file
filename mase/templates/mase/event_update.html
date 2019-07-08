@@ -1,0 +1,5 @@
+{% extends 'mase/event_form.html' %}
+
+{% block form_diff %}
+    <form role="form" class="form-horizontal" action="{% url 'modifier_event' object.uuid %}" method="post">{% csrf_token %}
+        {% endblock %}

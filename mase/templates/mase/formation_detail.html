@@ -1,0 +1,113 @@
+{% extends 'mase/blank_dashboard.html' %}
+
+{% load static %}
+
+{% block css_supp %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/lib/datatables/css/dataTables.bootstrap.min.css' %}"/>
+{% endblock %}
+
+{% block content_title %}
+{{ object }}
+{% endblock %}
+
+{% block content %}
+<div class="tab-container">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#profil" data-toggle="tab">Détails</a></li>
+		<li><a href="#organismes" data-toggle="tab">Organismes offrant cette formation</a></li>
+		<li><a href="#intervenants" data-toggle="tab">Intervenants formés</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="profil" class="tab-pane active cont">
+			<div class="user-profile">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="info-block panel panel-default">
+							<div class="panel-heading">
+								<h4>Détails</h4>
+							</div>
+							<div class="panel-body">
+								<table class="no-border no-strip skills">
+									<tbody class="no-border-x no-border-y">
+										<tr>
+											<td class="item">Nom de la formation:<span class="icon s7-id"></span></td>
+											<td>{{ object.nom }}</td>
+										</tr>
+										<tr>
+											<td class="item">Contenu:<span class="icon s7-user"></span></td>
+											<td>{{ object.contenu }}</td>
+										</tr>
+										<tr>
+											<td class="item">Durée de validité de la formation:<span class="icon s7-gift"></span></td>
+											<td>{{ object.validite }} ANS</td>
+										</tr>
+										<tr>
+											<td class="item">Temps avant alerte:<span class="icon s7-date"></span></td>
+											<td>{{ object.tav }} JOURS</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="organismes" class="tab-pane cont">
+			<div class="widget widget-fullwidth widget-small">
+				<table id="table2" class="table table-striped table-hover table-fw-widget">
+					<thead>
+						<tr>
+							<th>Raison sociale</th>
+							<th>Adresse</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for org in object.formations_organismes.all %}
+						<tr class="odd gradeX">
+							<td>{{ org.organisme_formation.entite.raison_sociale }}</td>
+							<td>{{ org.organisme_formation.entite.adresse }} ans</td>
+							<td>
+								<a href="{% url 'detail_organisme' org.organisme_formation.entite.uuid %}" type="button" class="btn btn-xs"> <i class="fa fa-eye"></i></a>
+								<a href="{% url 'modifier_organisme' org.organisme_formation.entite.uuid %}" type="button" class="btn btn-xs"> <i class="fa fa-edit"></i></a>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="intervenants" class="tab-pane">
+			<div class="widget widget-fullwidth widget-small">
+				<table id="table3" class="table table-striped table-hover table-fw-widget">
+					<thead>
+						<tr>
+							<th>Numéro GTIS</th>
+							<th>Nom</th>
+                            <th>Prénom(s)</th>
+                            <th>Entreprise intervenante</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for int in intervenants %}
+						<tr class="odd gradeX">
+							<td>{{ int.num_gtis }}</td>
+							<td>{{ int.nom }}</td>
+							<td>{{ int.prenom }}</td>
+							<td>{{ int.ei.entite.raison_sociale }}</td>
+							<td>
+								<a href="{% url 'detail_intervenant' int.code %}" type="button" class="btn btn-xs"> <i class="fa fa-eye"></i></a>
+								<a href="{% url 'modifier_intervenant' int.code %}" type="button" class="btn btn-xs"> <i class="fa fa-edit"></i></a>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

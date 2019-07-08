@@ -1,0 +1,73 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block content %}
+ <!-- Page Title bar -->
+    <section class="defult-page-title overlay-black">
+      <div class="container clearfix">
+          <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div class="page-title-box center991">
+                      <div class="page-title-content">
+                        <h2><span>MASE</span> C'est quoi ?</h2>
+                       <!--  <p><a href="index-one.html">Home</a> / <a href="#">About</a></p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- About two Start -->
+    <section class="about-area-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col-two">
+                        <h3>Présentation</h3>
+                        <p>MASE est un système de management dont l’objectif est l’amélioration permanente et continue des performances Sécurité Santé Environnement des entreprises. </p>
+
+                        <p>C’est un système d’industriels au service des industriels qui cherche à :</p>
+                        <ol>
+                            <li>Améliorer la sécurité au travers d’un système de management adapté à l’entreprise.</li>
+                            <li>Mieux s’organiser, mieux communiquer, en améliorant les conditions d’intervention des salariés.</li>
+                            <li>Mettre en place un langage commun afin de progresser ensemble.</li>
+                        </ol>
+
+                        <p>MASE est un groupement d’associations de type « loi 1901 » dont les membres sont les entreprises utilisatrices et les entreprises intervenantes. </p>
+                        <p>MASE c’est un référentiel.</p>
+
+                        <p>C’est une base de réflexion qui permet à l’entreprise de mieux structurer sa démarche SSE en explorant les cinq axes préconisés.</p>
+
+                        <p>MASE c’est aussi un système de reconnaissance : certification </p>
+
+                        <p>Le but est de pérenniser les systèmes de management de la sécurité par l’analyse périodique des résultats des entreprises et l’attribution d’une certification par le comité de pilotage régional après réalisation d’un audit confié à un organisme extérieur sélectionné. </p>
+
+                        <p>La certification est délivrée pour le système commun MASE-UIC suivant accord signé le 20 décembre 2007 entre Alain Devic Président de l’UIC et Serge Kéroullé Président de l’association MASE National. </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col-two col-lg-12 col-md-6">
+                      <img src="{% static 'images/bg/5.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="about-col-img clearfix">
+                            <img src="{% static 'images/about/5.jpg' %}" alt="" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s"> 
+                            <div class="video-layer wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                                <a class="demo" href="{% static 'Mase.mp4' %}"><i class="pe-7s-video"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js_supp %}
+	<script type="text/javascript">
+		$(function() {
+			$('#li_about').addClass('active');
+		});
+	</script>
+{% endblock %}

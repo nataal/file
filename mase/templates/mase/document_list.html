@@ -1,0 +1,51 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block content %}
+<section class="pricing-area pricing-table-area">
+	<div class="container">
+		<div class="row">
+			<div class="pricing-box-style-four">
+				{% for document in object_list %}
+				<div class="col-res-100 col-xs-12 col-sm-6 col-md-3">
+					<div class="pricing-item">
+						<div class="pricing-deco">
+							<h3 class="pricing-title">{{ document.titre }}</h3>
+						</div>
+						<div style="text-align:center;">
+							{% if ".pdf" in document.document.name %}
+							<img src="{% static 'images/icons/pdf-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".docx" in document.document.name %}
+							<img src="{% static 'images/icons/word-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".doc" in document.document.name %}
+							<img src="{% static 'images/icons/word-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".xls" in document.document.name %}
+							<img src="{% static 'images/icons/excel-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".xlsx" in document.document.name %}
+							<img src="{% static 'images/icons/excel-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".ppt" in document.document.name %}
+							<img src="{% static 'images/icons/ppt-icon.png' %}" style="width: 100px; height:100px;">
+							{% elif ".ppt" in document.document.name %}
+							<img src="{% static 'images/icons/ppt-icon.png' %}" style="width: 100px; height:100px;">
+							{% else %}
+							<img src="{% static 'images/icons/video-icon.png' %}" style="width: 100px; height:100px;">
+							{% endif %}
+						</div>
+						<a href="{{ document.document.url }}" class="common-btn center-block" data-text="Choose plan"><span>Télécharger</span></a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% block js_supp %}
+	<script type="text/javascript">
+		$(function() {
+			$('#li_about').addClass('active');
+		});
+	</script>
+{% endblock %}

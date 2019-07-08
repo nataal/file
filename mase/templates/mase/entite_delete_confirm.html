@@ -1,0 +1,5 @@
+<form action="{% url 'effacer_entite' object.pk %}" method="post">
+    {% csrf_token %}
+    <p>Voulez-vous vraiment supprimer {{ entite.nom }} ?</p>
+    <input type="submit" value="Confirmer">
+</form>

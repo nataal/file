@@ -1,0 +1,324 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Banner start -->
+    <section class="banner-area parallax overlay-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="banner-box">
+              <h2>Bienvenue sur <span>MASE</span> Sénégal</h2>
+              <h3 class="typewrite" data-period="2000" data-type='[ "A votre service", "Votre sécurité, notre priorité" ]'> 
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Start -->
+    <section class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col">
+                        <h3>Présentation <span></span> </h3>
+                        <h5>Mot du Président du conseil d'Administration</h5>
+                        <h5>Daouda KEBE, Directeur Technique de la SAR</h5>
+
+                        <p>La nécessité de promouvoir le développement d’un système formalisé de gestion de la sécurité dans nos entreprises et l’amélioration continue de nos performances dans les domaines de la Sécurité, de la Santé, de l’Environnement s’imposent comme une réalité incontournable pour les chefs d’entreprises sénégalais.</p>
+
+                        <p>C’est dans ce contexte qu’est né MASE Sénégal. Sur un plan plus global, le Manuel d’Amélioration de la Sécurité des Entreprises, qui a au passage fêté ses 20 ans l’an dernier, est une initiative d’entreprises. Ceci lui confère toute sa légitimité.</p>
+
+                        <p>MASE dispose d’un référentiel, d’un processus de certification mais surtout de statistiques qui prouvent que son application permet en pratique de réduire les accidents d’au moins 20 à 30% pour les entreprises qui l’ont installé comme système de gestion. </p>
+
+                        <p>Élu le 23 mai 2016 Président de MASE Sénégal, mon objectif est que notre Association puisse mettre à disposition des chefs d’entreprises et des travailleurs sénégalais un système pratique, pragmatique et efficient. Cet objectif devrait à terme permettre aux entreprises intervenantes et utilisatrices de parler le même langage, réaliser et comparer des performances dans les domaines de la Sécurité, de la Santé, de l’Environnement. Ceci demande un dialogue permanent avec tout le secteur industriel et les Pouvoirs Publics afin que la pertinence de MASE soit comprise.
+                        </p>
+                        <p>L’équipe qui pilote la destinée de MASE Sénégal assure son engagement à œuvrer efficacement et continue de prouver au fil des jours son efficacité par le nombre d’acteurs croissant qui rejoint MASE Sénégal.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-col-img clearfix">
+                        <img src="{% static 'images/about/5.jpg' %}" alt="" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s"> 
+                        <div class="video-layer wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <!-- <a class="demo" href="https://www.youtube.com/watch?v=7e90gBu4pas"><i class="pe-7s-video"></i></a> -->
+                            <a class="demo" href="{% static 'Mase.mp4' %}"><i class="pe-7s-video"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Start -->
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="section-title">
+                        <div class="title-style clearfix">
+                            <h2>Nos <span>Missions</span></h2>
+                        </div>
+                        <!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-600">
+                    <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                        <div class="service-icon">
+                            <i class="pe-7s-safe"></i>
+                        </div>
+                        <!-- <h3>Sécurité Santé et Environnement</h3> -->
+                        <p>Améliorer la Sécurité, la Santé au poste de travail et l’Environnement (SSE)
+                            au travers d’un système de management adapté à l’entreprise</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-600">
+                    <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="service-icon">
+                            <i class="pe-7s-pen"></i>
+                        </div>
+                        <!-- <h3>unique design</h3> -->
+                        <p>Améliorer les performances de l'entreprise. Mieux s’organiser, mieux communiquer, en améliorant les conditions d’intervention des salariés</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-600">
+                    <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="service-icon">
+                            <i class="pe-7s-graph1"></i>
+                        </div>
+                        <!-- <h3>Best quality</h3> -->
+                        <p>Mettre en place un langage commun afin de progresser ensemble</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-600">
+                    <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="service-icon">
+                            <i class="pe-7s-more"></i>
+                        </div>
+                        <!-- <h3>Best quality</h3> -->
+                        <p>Gérer les risques liés à la co-activité (Entreprise Utilisatrice – Entreprises Intervenantes) particulièrement pour les sites à procédé industriel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter Start -->
+    <section class="counter-area parallax overlay-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-480">
+                    <div class="counter-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".0s">
+                        <div class="counter">
+                            <i class="pe-7s-user"></i>
+                            <span class="count">{{ eu }}</span>
+                            <span>+</span>
+                            <p>Entreprises Utilisatrices <br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-480">
+                    <div class="counter-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="counter">
+                            <i class="pe-7s-users"></i>
+                            <span class="count">{{ ei }}</span>
+                            <span>+</span>
+                            <p>Entreprises Intervenantes <br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-480">
+                    <div class="counter-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="counter">
+                            <i class="pe-7s-home"></i>
+                            <span class="count">{{ of }}</span>
+                            <span>+</span>
+                            <p>Organismes de formations agréés par MASE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 fw-480">
+                    <div class="counter-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
+                        <div class="counter">
+                            <i class="pe-7s-study"></i>
+                            <span class="count">{{ formations }}</span>
+                            <span>+</span>
+                            <p>Formations <br><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Start -->
+    <section class="team-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="section-title">
+                        <div class="title-style">
+                            <h2>Notre équipe</h2>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 fw-600">
+                    <div class="team-single-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".0s">
+                        <div class="team-img">
+                            <a href="team-details.html"><img src="{% static 'images/team/Colonel2.jpg' %}" alt=""></a>
+                            <div class="team-overlay">
+                               <div class="team-content">
+                                    <h4><a href="team-details.html">Colonel Mbareck DIOP</a></h4>
+                                    <p>Administrateur</p>
+                                    <div class="team-social-group">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 fw-600">
+                    <div class="team-single-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".0s">
+                        <div class="team-img">
+                            <a href="team-details.html"><img src="{% static 'images/team/decoss.jpg' %}" alt=""></a>
+                            <div class="team-overlay">
+                               <div class="team-content">
+                                    <h4><a href="team-details.html">Luc DECOSSE</a></h4>
+                                    <p>Administrateur MASE Méditerranée GIPHISE</p>
+                                    <p>Chargé de l'accompagnement de Mase à l'international</p>
+                                    <div class="team-social-group">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 fw-600">
+                    <div class="team-single-col wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="team-img">
+                            <a href="team-details.html"><img src="{% static 'images/team/Sokhna2.jpg' %}" alt=""></a>
+                            <div class="team-overlay">
+                               <div class="team-content">
+                                    <h4><a href="team-details.html">Sokhna DEME DIALLO</a></h4>
+                                    <p>Secrétaire permanente</p>
+                                    <div class="team-social-group">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Start -->
+    <section class="blog-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="section-title">
+                        <div class="title-style">
+                            <h2>événements à venir</h2>
+                        </div>
+                        <p>Formation des cohortes, Audits, Assemblée générale, Conseil d'administration, Formation et agrément des Auditeurs MASE, Certification, ...etc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for event in events %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 fw-600">
+                     <div class="blog-col wow fadeIn" data-wow-duration="1s" data-wow-delay=".0s">
+                         <div class="blog-content">
+                             <h4>Formation du Comité de Pilotage MASE Sénégal.</h4>
+                             <div class="info-bar clearfix">
+                                 <h3 style="color: white;">26 Juin 2018</h3>
+                             </div>
+                             <p>Cette formation sera animée par Monsieur Luc DECOSSE Administrateur MASE MEDITERRANEE GYPHISE chargé de l’accompagnement MASE Sénégal.</p>
+                         </div>
+                     </div>
+                </div>
+                {% empty %}
+                <p>Il n'y a pas d'évenements de prévus pour le moment</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Client Style Five -->
+    <section class="client-style-five">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Nos partenaires</h2>
+                    </div>
+                   <!--  <p style="text-align: center;">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years.</p> -->
+                    <br>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="client-carousel">
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo-mase-asso.jpg' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/mase-normandie.png' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo-mase-est.png' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo-alpes.png' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/mase-atlantique.jpg' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo-medi.png' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo-ci.png' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo_css.gif' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/logo/logo_cnp.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>      
+    </section>
+{% endblock %}
+{% block js_supp %}
+	<script type="text/javascript">
+		$(function() {
+			$('#li_accueil').addClass('active');
+		});
+	</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% autoescape off %}
+Bonjour {{ user.entite.nom }},
+
+Nous avons bien reçu votre demande d'adhésion à MASE.
+
+Un compte {{ user.entite.type }} vous a été créé.
+
+Voici les accès :
+
+- Email : {{ user.email }}
+- Mot de passe : {{ password }}
+
+Une fois que MASE vous aurez payé les frais d'adhésion, MASE activera votre compte et vous pourrez accéder à votre compte.
+
+Cordialement,
+L'équipe MASE Sénégal
+{% endautoescape %}

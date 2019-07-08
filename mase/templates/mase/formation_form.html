@@ -1,0 +1,103 @@
+{% extends 'mase/blank_dashboard.html' %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content_title %} {% endblock %}
+
+{% block css_supp %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<style type="text/css">
+	.select2-container {
+		height: 44px !important;
+	}
+	.select2-container--default .select2-selection--multiple {
+		height: 44px !important;
+		border-color: #eaeaea;
+		border-radius: 0px;
+		cursor: text;
+		border-width: 2px;
+	    box-shadow: none;
+	    padding: 6px 12px;
+	    font-size: 14px;
+	}
+	.select2-container--default .select2-search--inline .select2-search__field{
+		text-align: left !important;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Formation</h3>
+			</div>
+			<div class="panel-body">
+				{% block form_diff %}
+				<form role="form" class="form-horizontal" action="{% url 'ajouter_formation' %}" method="post">{% csrf_token %}
+					{% endblock %}
+					<div class="form-group">
+						<label for="nom" class="col-sm-2 control-label">Nom</label>
+						<div class="col-sm-10">
+							{% render_field form.nom class="form-control" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Contenu</label>
+						<div class="col-sm-10">
+							{% render_field form.contenu class="form-control" %}
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Validité (Ans)</label>
+						<div class="col-sm-10">
+							{% render_field form.validite class="form-control" placeholder="temps de validité en année" %}
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Temps avant alerte</label>
+						<div class="col-sm-10">
+							{% render_field form.tav class="form-control" placeholder="temps en jours" %}
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Organismes</label>
+						<div class="col-sm-10">
+							{% render_field form.organismes class="form-control" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="text-inverse">
+								<button type="submit" class="btn btn-space btn-primary">Enregistrer</button>
+								<button class="btn btn-space btn-default">Annuler</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block js_supp %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#id_organismes').select2({
+			width: "100%",
+			allowClear: true,
+			placeholder: "Choisir",
+			language: {
+				noResults: function (params) {
+					return "Aucun organisme";
+				}
+			}
+		});
+    });
+</script>
+
+{% endblock %}

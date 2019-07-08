@@ -1,0 +1,32 @@
+{% extends 'mase/blank_site.html' %}
+{% load static %}
+
+{% block content %}
+<section class="defult-page-title overlay-black">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="page-title-box center991">
+                    <div class="page-title-content">
+                        <h2>MASE <span>Sénégal</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-area-two">
+        <div class="container">
+            <h3>Centres de formations agréés par MASE Sénégal</h3>
+            <ul>
+                {% for centre in of %}
+                    <li>
+                        {{ centre.entite.raison_sociale }}
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+</section>
+
+{% endblock %}

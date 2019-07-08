@@ -1,0 +1,1383 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "1ztmymwsok3juinb2600ntbfyq3xp6gi",
+    "fields": {
+      "session_data": "YzE1MWM0NDA1YjhmYzYzZGJiNmUyMDcyNjJjNmVlZWZjMzhkMDU1MTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6Ijg5IiwiX2F1dGhfdXNlcl9oYXNoIjoiODM5MGRkMTFkM2E1N2Q5ZTQ0NjNkN2E0ZjJlYTgxYTE5ODg5ZjBkMiJ9",
+      "expire_date": "2018-08-28T17:32:40.297Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "acwjfir9lqsqi8axnhg73fp8s3vidfok",
+    "fields": {
+      "session_data": "ODAzNzBmODIxNmI0ODY2MGUzMGRiOGU0ZTNjODFlYzNlODlkYjc4ZDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMTY3MzljOTgxYTljNGMwZGNlM2IxYjkyMjdkNzdkYjdmZjk0YTZmIn0=",
+      "expire_date": "2018-07-13T17:37:13.440Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fia7dcgondg4qepjc7x3fsy5o96l6j0t",
+    "fields": {
+      "session_data": "OWU0M2EwM2YxZWRkZjMzM2Q2Y2NiNjg0OWRlZWI5YzY5ODQ3ODY1MDp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxNjczOWM5ODFhOWM0YzBkY2UzYjFiOTIyN2Q3N2RiN2ZmOTRhNmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2018-08-13T11:29:07.628Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "m25e577j6xs1ti8rfrijhtjob40w2khh",
+    "fields": {
+      "session_data": "OTEwNDk5ODZlYzA1NGIzNmM5M2EwYTM0NWM4NmM0MWIzOTY3Yzc1NTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjkwIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjJhZDIzMmIzYTBlMTY2YjBkNTUxYmY3ZTJlMDQxOGE2ODNmYzQ1MSJ9",
+      "expire_date": "2018-08-28T16:41:23.449Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "q77wj4ppf68j3qw5t2vdguhhal2853mc",
+    "fields": {
+      "session_data": "ODAzNzBmODIxNmI0ODY2MGUzMGRiOGU0ZTNjODFlYzNlODlkYjc4ZDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMTY3MzljOTgxYTljNGMwZGNlM2IxYjkyMjdkNzdkYjdmZjk0YTZmIn0=",
+      "expire_date": "2018-07-06T00:00:45.603Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "t0qd9tono6utprmgkwwvfyhxlxpyaeej",
+    "fields": {
+      "session_data": "MWFhZWE5OTQwOGQ4OTUzNjY1ODE0YmE3ZDQ5YWQ1MTZiNzk2M2NkZDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzE2NzM5Yzk4MWE5YzRjMGRjZTNiMWI5MjI3ZDc3ZGI3ZmY5NGE2ZiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+      "expire_date": "2018-08-21T22:59:27.307Z"
+    }
+  },
+  {
+    "model": "mase.entite",
+    "pk": 1,
+    "fields": {
+      "created": "2018-08-14T16:04:35.457Z",
+      "modified": "2018-08-14T16:04:35.457Z",
+      "uuid": "6f3c11c3-8077-4c4a-a82f-254a0d48bd06",
+      "raison_sociale": "Sunuhope",
+      "adresse": "Baobabs",
+      "type": ""
+    }
+  },
+  {
+    "model": "mase.entite",
+    "pk": 3,
+    "fields": {
+      "created": "2018-08-14T16:22:43.528Z",
+      "modified": "2018-08-14T17:20:26.772Z",
+      "uuid": "dddbe55f-517f-4fc9-a424-e066d934068d",
+      "raison_sociale": "Sonatel",
+      "adresse": "Sacr\u00e9 Coeur Ker Gorgui 3",
+      "type": "eu"
+    }
+  },
+  {
+    "model": "mase.entite",
+    "pk": 4,
+    "fields": {
+      "created": "2018-08-14T16:24:08.355Z",
+      "modified": "2018-08-14T17:19:24.145Z",
+      "uuid": "94f9c0d3-aa18-4172-9d0b-e13ca1758c73",
+      "raison_sociale": "Tosh Peinture",
+      "adresse": "Sicap-Baobabs",
+      "type": "ei"
+    }
+  },
+  {
+    "model": "mase.organismeformation",
+    "pk": 1,
+    "fields": {
+      "entite": 1
+    }
+  },
+  {
+    "model": "mase.formation",
+    "pk": 1,
+    "fields": {
+      "created": "2018-08-14T16:19:56.116Z",
+      "modified": "2018-08-14T16:19:56.116Z",
+      "uuid": "4560ae19-c3ff-4117-b48a-66d444c57f5e",
+      "nom": "Cours 1",
+      "contenu": "Nouveau Cours",
+      "validite": 3,
+      "tav": 120
+    }
+  },
+  {
+    "model": "mase.formationsorganismes",
+    "pk": 1,
+    "fields": {
+      "created": "2018-08-14T16:19:56.161Z",
+      "modified": "2018-08-14T16:19:56.161Z",
+      "formation": 1,
+      "organisme_formation": 1
+    }
+  },
+  {
+    "model": "mase.entrepriseutilisatrice",
+    "pk": 1,
+    "fields": {
+      "activite": "B",
+      "effectif": "5000",
+      "ca": "50.000.000.000 FCFA",
+      "directeur": "S\u00e9kou Dram\u00e9",
+      "contact_demarche": "Cheikh T Sy",
+      "entite": 3
+    }
+  },
+  {
+    "model": "mase.entrepriseintervenante",
+    "pk": 1,
+    "fields": {
+      "activite": "IBE",
+      "effectif": "",
+      "ca": "4000000",
+      "directeur": "Tosh",
+      "contact_demarche": "Patricia Semedo 776537421",
+      "entite": 4,
+      "organisation": "BTP",
+      "relations_etablissements": "",
+      "sous_traitants_activites": "",
+      "intervention_industriels": "",
+      "periode_audit": "",
+      "demarche_management_qualite": false,
+      "demarche_iso": false,
+      "utilisatrices": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mase.documentmase",
+    "pk": 1,
+    "fields": {
+      "created": "2018-08-08T13:15:17.570Z",
+      "modified": "2018-08-08T13:15:17.570Z",
+      "uuid": "7173bd04-f484-4cff-805a-a3cab8cbc536",
+      "titre": "Mase test",
+      "description": "Mase test",
+      "document": "documents/MASE_SENEGAL_Offre_DiambarsTech.pdf"
+    }
+  },
+  {
+    "model": "mase.documentmase",
+    "pk": 2,
+    "fields": {
+      "created": "2018-08-10T09:32:42.564Z",
+      "modified": "2018-08-10T09:32:42.564Z",
+      "uuid": "55564d50-afea-49fa-b4df-0ac57c49d715",
+      "titre": "Test",
+      "description": "Test",
+      "document": "documents/Canicule.ppt"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add formation intervenant",
+      "content_type": 6,
+      "codename": "add_formationintervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change formation intervenant",
+      "content_type": 6,
+      "codename": "change_formationintervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete formation intervenant",
+      "content_type": 6,
+      "codename": "delete_formationintervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add formation",
+      "content_type": 7,
+      "codename": "add_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change formation",
+      "content_type": 7,
+      "codename": "change_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete formation",
+      "content_type": 7,
+      "codename": "delete_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add utilisateur",
+      "content_type": 8,
+      "codename": "add_utilisateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change utilisateur",
+      "content_type": 8,
+      "codename": "change_utilisateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete utilisateur",
+      "content_type": 8,
+      "codename": "delete_utilisateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add intervenant",
+      "content_type": 9,
+      "codename": "add_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change intervenant",
+      "content_type": 9,
+      "codename": "change_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete intervenant",
+      "content_type": 9,
+      "codename": "delete_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can add entreprise intervenante",
+      "content_type": 10,
+      "codename": "add_entrepriseintervenante"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can change entreprise intervenante",
+      "content_type": 10,
+      "codename": "change_entrepriseintervenante"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can delete entreprise intervenante",
+      "content_type": 10,
+      "codename": "delete_entrepriseintervenante"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can add organisme formation",
+      "content_type": 11,
+      "codename": "add_organismeformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can change organisme formation",
+      "content_type": 11,
+      "codename": "change_organismeformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can delete organisme formation",
+      "content_type": 11,
+      "codename": "delete_organismeformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can add formateur",
+      "content_type": 12,
+      "codename": "add_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can change formateur",
+      "content_type": 12,
+      "codename": "change_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can delete formateur",
+      "content_type": 12,
+      "codename": "delete_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add entite",
+      "content_type": 13,
+      "codename": "add_entite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change entite",
+      "content_type": 13,
+      "codename": "change_entite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete entite",
+      "content_type": 13,
+      "codename": "delete_entite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can add formations organismes",
+      "content_type": 14,
+      "codename": "add_formationsorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can change formations organismes",
+      "content_type": 14,
+      "codename": "change_formationsorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can delete formations organismes",
+      "content_type": 14,
+      "codename": "delete_formationsorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can add entreprise utilisatrice",
+      "content_type": 15,
+      "codename": "add_entrepriseutilisatrice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can change entreprise utilisatrice",
+      "content_type": 15,
+      "codename": "change_entrepriseutilisatrice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can delete entreprise utilisatrice",
+      "content_type": 15,
+      "codename": "delete_entrepriseutilisatrice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Reset Access Of",
+      "content_type": 8,
+      "codename": "reset_access_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Add Edit Act Desact Intervenant",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Add Edit Act Desact Ei",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Stats",
+      "content_type": 8,
+      "codename": "stats"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Liste Of",
+      "content_type": 8,
+      "codename": "liste_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Add Edit Act Desact Formation",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Liste Ei",
+      "content_type": 8,
+      "codename": "liste_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Add Edit Act Desact Formateur",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Reset Access Eu",
+      "content_type": 8,
+      "codename": "reset_access_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Download Stats",
+      "content_type": 8,
+      "codename": "download_stats"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Liste Eu",
+      "content_type": 8,
+      "codename": "liste_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Liste Intervenants",
+      "content_type": 8,
+      "codename": "liste_intervenants"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Reset Access Ei",
+      "content_type": 8,
+      "codename": "reset_access_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Liste Formateurs",
+      "content_type": 8,
+      "codename": "liste_formateurs"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Add Edit Act Desact Eu",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Add Edit Act Desact Of",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Liste Formations",
+      "content_type": 8,
+      "codename": "liste_formations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can add evenement",
+      "content_type": 16,
+      "codename": "add_evenement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can change evenement",
+      "content_type": 16,
+      "codename": "change_evenement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can delete evenement",
+      "content_type": 16,
+      "codename": "delete_evenement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can add formateurs organismes",
+      "content_type": 17,
+      "codename": "add_formateursorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can change formateurs organismes",
+      "content_type": 17,
+      "codename": "change_formateursorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can delete formateurs organismes",
+      "content_type": 17,
+      "codename": "delete_formateursorganismes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add document mase",
+      "content_type": 18,
+      "codename": "add_documentmase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change document mase",
+      "content_type": 18,
+      "codename": "change_documentmase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete document mase",
+      "content_type": 18,
+      "codename": "delete_documentmase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Add Event",
+      "content_type": 8,
+      "codename": "add_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Liste Users",
+      "content_type": 8,
+      "codename": "liste_users"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Manage Document",
+      "content_type": 8,
+      "codename": "manage_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Lister Les Of",
+      "content_type": 8,
+      "codename": "lister_les_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Lister Les Ei",
+      "content_type": 8,
+      "codename": "lister_les_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Lister Les Eu",
+      "content_type": 8,
+      "codename": "lister_les_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Lister Les Formations",
+      "content_type": 8,
+      "codename": "lister_les_formations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Supprimer Un Eu",
+      "content_type": 8,
+      "codename": "supprimer_un_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Modifier Un Formateur",
+      "content_type": 8,
+      "codename": "modifier_un_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Modifier Une Formation",
+      "content_type": 8,
+      "codename": "modifier_une_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "name": "Ajouter Un Ei",
+      "content_type": 8,
+      "codename": "ajouter_un_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "name": "Lister Les Formateurs",
+      "content_type": 8,
+      "codename": "lister_les_formateurs"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "name": "Liste Events",
+      "content_type": 8,
+      "codename": "liste_events"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "name": "Ajouter Un Intervenant",
+      "content_type": 8,
+      "codename": "ajouter_un_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "name": "Lister Les Intervenants",
+      "content_type": 8,
+      "codename": "lister_les_intervenants"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "name": "Supprimer Un Ei",
+      "content_type": 8,
+      "codename": "supprimer_un_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "name": "Ajouter Une Formation",
+      "content_type": 8,
+      "codename": "ajouter_une_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "name": "Modifier Un Of",
+      "content_type": 8,
+      "codename": "modifier_un_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+      "name": "Supprimer Un Intervenant",
+      "content_type": 8,
+      "codename": "supprimer_un_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+      "name": "Modifier Un Eu",
+      "content_type": 8,
+      "codename": "modifier_un_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+      "name": "Modifier Un Ei",
+      "content_type": 8,
+      "codename": "modifier_un_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+      "name": "Add Edit Act Desact User",
+      "content_type": 8,
+      "codename": "add_edit_act_desact_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+      "name": "Ajouter Un Eu",
+      "content_type": 8,
+      "codename": "ajouter_un_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+      "name": "Ajouter Un Formateur",
+      "content_type": 8,
+      "codename": "ajouter_un_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+      "name": "Ajouter Un Of",
+      "content_type": 8,
+      "codename": "ajouter_un_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "name": "Supprimer Un Of",
+      "content_type": 8,
+      "codename": "supprimer_un_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+      "name": "Modifier Un Intervenant",
+      "content_type": 8,
+      "codename": "modifier_un_intervenant"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+      "name": "Supprimer Une Formation",
+      "content_type": 8,
+      "codename": "supprimer_une_formation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+      "name": "Supprimer Un Formateur",
+      "content_type": 8,
+      "codename": "supprimer_un_formateur"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+      "name": "Afficher Mon Organisme",
+      "content_type": 8,
+      "codename": "afficher_mon_organisme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+      "name": "Ajouter Un Formateur Of",
+      "content_type": 8,
+      "codename": "ajouter_un_formateur_of"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+      "name": "Afficher Mon Eu",
+      "content_type": 8,
+      "codename": "afficher_mon_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+      "name": "Mon Ei",
+      "content_type": 8,
+      "codename": "mon_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+      "name": "Lister Les Documents",
+      "content_type": 8,
+      "codename": "lister_les_documents"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+      "name": "Ajouter Une Ei",
+      "content_type": 8,
+      "codename": "ajouter_une_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+      "name": "Desactiver Un Of",
+      "content_type": 8,
+      "codename": "desactiver_un_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+      "name": "Ajouter Une Eu",
+      "content_type": 8,
+      "codename": "ajouter_une_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+      "name": "Supprimer Une Ei",
+      "content_type": 8,
+      "codename": "supprimer_une_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+      "name": "Gerer Les Documents",
+      "content_type": 8,
+      "codename": "gerer_les_documents"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+      "name": "Modifier Une Ei",
+      "content_type": 8,
+      "codename": "modifier_une_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+      "name": "Activer Un Of",
+      "content_type": 8,
+      "codename": "activer_un_OF"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+      "name": "Lister Les Users",
+      "content_type": 8,
+      "codename": "lister_les_users"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 117,
+    "fields": {
+      "name": "Gerer Les Events",
+      "content_type": 8,
+      "codename": "gerer_les_events"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 118,
+    "fields": {
+      "name": "Activer Une Eu",
+      "content_type": 8,
+      "codename": "activer_une_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 119,
+    "fields": {
+      "name": "Modifier Une Eu",
+      "content_type": 8,
+      "codename": "modifier_une_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 120,
+    "fields": {
+      "name": "Activer Une Ei",
+      "content_type": 8,
+      "codename": "activer_une_EI"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 121,
+    "fields": {
+      "name": "Supprimer Une Eu",
+      "content_type": 8,
+      "codename": "supprimer_une_EU"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 122,
+    "fields": {
+      "name": "Afficher Mon Ei",
+      "content_type": 8,
+      "codename": "afficher_mon_EI"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "eu",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "ei",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 5,
+    "fields": {
+      "name": "of",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 6,
+    "fields": {
+      "name": "admin",
+      "permissions": []
+    }
+  },
+  {
+    "model": "mase.utilisateur",
+    "pk": 86,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$FYrw78hHj52I$6RwE8CYWaVRS38cOpQ5leCw1InB6d9skQXRHu0DFDzE=",
+      "last_login": "2018-08-14T16:12:15.525Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-08-14T16:04:35.487Z",
+      "created": "2018-08-14T16:04:35.884Z",
+      "modified": "2018-08-14T16:04:35.884Z",
+      "email": "jlsemedo@sunuhope.com",
+      "telephone": "+221 77 724 08 43",
+      "entite": 1,
+      "groups": [
+        5
+      ],
+      "user_permissions": [
+        104,
+        105,
+        79,
+        80,
+        86,
+        81,
+        89,
+        78
+      ]
+    }
+  },
+  {
+    "model": "mase.utilisateur",
+    "pk": 87,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$YChROFz5OOco$wGsa/wdECFKY5G/ClGoorxPfwOrpgOzBEAW1r3x5K+k=",
+      "last_login": "2018-08-14T17:01:13.495Z",
+      "is_superuser": true,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-08-14T16:16:17.201Z",
+      "created": "2018-08-14T16:16:17.565Z",
+      "modified": "2018-08-14T16:16:17.565Z",
+      "email": "francisco.luc93@gmail.com",
+      "telephone": "",
+      "entite": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "mase.utilisateur",
+    "pk": 89,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$0aTwgGDhhimP$LVp1SNwr4XfPupMSCj8HPqcRujU064clrfZtDPI5XUA=",
+      "last_login": "2018-08-14T17:32:40.237Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-08-14T16:22:43.555Z",
+      "created": "2018-08-14T16:22:43.933Z",
+      "modified": "2018-08-14T17:20:26.786Z",
+      "email": "diambarsmobile@gmail.com",
+      "telephone": "+221 33 877 22 11",
+      "entite": 3,
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        106,
+        108,
+        79,
+        80,
+        81,
+        78
+      ]
+    }
+  },
+  {
+    "model": "mase.utilisateur",
+    "pk": 90,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$xpCgu85Z4aiG$kPXKq2BruufHBbNjC6p0iH0Qg8huaVkb7jVdfm9GZaY=",
+      "last_login": "2018-08-14T17:16:34.805Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-08-14T16:24:08.391Z",
+      "created": "2018-08-14T16:24:08.771Z",
+      "modified": "2018-08-14T17:19:24.159Z",
+      "email": "aristide.semedo@gmail.com",
+      "telephone": "+221 77 636 93 73",
+      "entite": 4,
+      "groups": [
+        2
+      ],
+      "user_permissions": [
+        122,
+        108,
+        79,
+        80,
+        81,
+        78,
+        107
+      ]
+    }
+  }
+]

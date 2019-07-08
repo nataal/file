@@ -1,0 +1,9 @@
+<h3>Ajouter une entité</h3>
+
+<form action="{% url 'ajouter_entite' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    {{ utilisateurs.as_p }}
+    <input type="submit" value="Enregistrer">
+</form>

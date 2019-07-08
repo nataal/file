@@ -1,0 +1,79 @@
+/*------------------------------------------------------------------
+  [Contextual colors]
+*/
+// Contextual colors
+.text-success {
+  .text-emphasis-variant(@success-color);
+}
+
+.text-info {
+  .text-emphasis-variant(@info-color);
+}
+
+.text-warning {
+  .text-emphasis-variant(@warning-color);
+}
+
+.text-danger {
+  .text-emphasis-variant(@danger-color);
+}
+
+.text-alt1 {
+  .text-emphasis-variant(@alt-color1);
+}
+
+.text-alt2 {
+  .text-emphasis-variant(@alt-color2);
+}
+
+.text-alt3 {
+  .text-emphasis-variant(@alt-color3);
+}
+
+.text-alt4 {
+  .text-emphasis-variant(@alt-color4);
+}
+
+/*------------------------------------------------------------------
+  [List]
+*/
+
+.list-inline, 
+.list-unstyled {
+
+	//RTL support
+	.rtl & {
+		padding-right: 0;
+	}
+}
+
+/*------------------------------------------------------------------
+  [Blockquotes]
+*/
+
+blockquote {
+
+	//RTL support
+	.rtl & {
+		border-left-width: 0;
+		border-right: 5px solid @blockquote-border-color;
+
+		&.blockquote-reverse {
+			text-align: left;
+			padding-right: 0;
+			padding-left: 15px;
+			border-right-width: 0;
+			border-left: 5px solid @blockquote-border-color;
+		}
+	}
+}
+
+// Text reverse helper for RTL
+.text-inverse {
+	text-align: right;
+
+	//RTL Support
+	.rtl & {
+		text-align: left;
+	}
+}

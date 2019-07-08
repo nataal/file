@@ -1,0 +1,146 @@
+{% extends 'mase/blank_dashboard.html' %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content_title %} {% endblock %}
+{% block css_supp %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+<style type="text/css">
+	.select2-container {
+		height: 44px !important;
+	}
+	.select2-container--default .select2-selection--multiple {
+		height: 44px !important;
+		border-color: #eaeaea;
+		border-radius: 0px;
+		cursor: text;
+		border-width: 2px;
+	    box-shadow: none;
+	    padding: 6px 12px;
+	    font-size: 14px;
+	}
+	.select2-container--default .select2-search--inline .select2-search__field{
+		text-align: left !important;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Ajouter un intervenant</h3>
+			</div>
+			<div class="panel-body">
+                {% block form_diff %}
+				<form role="form" class="form-horizontal" enctype="multipart/form-data" method="post" action="{% url 'ajouter_intervenant' %}">{% csrf_token %}
+					{% endblock %}
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Nom</label>
+						<div class="col-sm-10">
+							{% render_field form.nom class="form-control" placeholder="Nom" %}
+							<span>{{ form.nom.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Prénoms</label>
+						<div class="col-sm-10">
+							{% render_field form.prenom class="form-control" placeholder="Prénom(s)" %}
+							<span>{{ form.prenom.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Sexe</label>
+						<div class="col-sm-10">
+							{% render_field form.sexe class="form-control" placeholder="Sexe" %}
+							<span>{{ form.sexe.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Date de naissance</label>
+						<div class="col-sm-10">
+							{% render_field form.date_naissance class="form-control datepicker" placeholder="Date de naissance" autocomplete="off" %}
+							<span>{{ form.date_naissance.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Lieu de naissance</label>
+						<div class="col-sm-10">
+							{% render_field form.lieu_naissance class="form-control" placeholder="Lieu de naissance" %}
+							<span>{{ form.lieu_naissance.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Entreprise intervenante</label>
+						<div class="col-sm-10">
+							{% render_field form.ei class="form-control" placeholder="Entreprise intervenante" %}
+							<span>{{ form.ei.errors }}</span>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="tel" class="col-sm-2 control-label">Photo</label>
+						<div class="col-sm-10">
+							{% render_field form.photo class="form-control" placeholder="Photo" %}
+							<span>{{ form.photo.errors }}</span>
+						</div>
+					</div>
+                    {% block formset %}
+
+                    {% endblock %}
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="text-inverse">
+								<button type="submit" class="btn btn-space btn-primary">Enregistrer</button>
+								<button class="btn btn-space btn-default">Annuler</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block js_supp %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		;(function($){
+			$.fn.datepicker.dates['fr'] = {
+				days: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+				daysShort: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+				daysMin: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+				months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+				monthsShort: ["janv.", "févr.", "mars", "avril", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
+				today: "Aujourd'hui",
+				monthsTitle: "Mois",
+				clear: "Effacer",
+				weekStart: 1,
+				format: "dd/mm/yyyy"
+			};
+		}(jQuery));
+		$('.datepicker').datepicker({
+			language: 'fr',
+			autoclose: true,
+			todayHighlight: true
+		});
+		var url = window.location.href,
+        part = url.split("/"),
+        path = part[part.length -2];
+        if( path == 'creer'){
+        	$("#id_ei option:selected").remove();
+			$("#id_sexe option:selected").remove();
+        } 
+    });
+	
+</script>
+
+{% endblock %}

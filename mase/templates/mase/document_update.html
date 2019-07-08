@@ -1,0 +1,5 @@
+{% extends 'mase/document_form.html' %}
+
+{% block form_diff %}
+    <form role="form" class="form-horizontal" enctype="multipart/form-data" action="{% url 'modifier_document' object.uuid %}" method="post">{% csrf_token %}
+        {% endblock %}

@@ -1,0 +1,11 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+settings.py
+uploads
+photos
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

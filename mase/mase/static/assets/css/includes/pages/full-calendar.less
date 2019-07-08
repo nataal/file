@@ -1,0 +1,197 @@
+/*------------------------------------------------------------------
+  [Full calendar]
+*/
+.full-calendar { 
+
+	.fc-toolbar {
+		padding-top: 20px;
+		margin-bottom: 20px;
+
+		.fc-left {
+			padding: 0 10px;
+		}
+
+		& > * > * {
+			@media @phone{	
+			float: none;
+			}
+		}
+	}
+
+	.fc-view-container {
+		
+		.fc-event-container {
+
+			.fc-event {
+			  background: @primary-color;
+			  border-color: darken(@primary-color, 8%);
+			  color: @light-color;
+			  border-radius: 0;
+			}
+		}
+		
+		.fc-border-separate{
+			.fc-today {
+				background-color: darken(@light-color, 3%);
+			}
+		}
+
+		.fc-cell-overlay {
+			background-color: fade(@primary-color, 50%);
+		}
+	}
+
+	.fc .fc-button-group > * {
+		margin: 0;
+
+		@media @phone {
+			float: none;
+		}
+
+		@media @small-phone {
+			margin-bottom: 10px;
+		}
+	}
+
+	.fc-button {
+	  color: @btn-default-color;
+	  background-image: none;
+	  border-width: 0 1px 0 0;
+		height: auto;
+		padding: 10px;
+		box-shadow: none;
+
+		@media @phone {
+			padding: 5px 8px;
+		}
+
+		&.fc-corner-right {
+			border: 0;
+		}
+
+	  &:focus,
+	  &.focus {
+	  	color: @light-color;
+	    background: @primary-color + 10%;
+	    text-shadow: none;  
+	  }
+
+	  &:hover, &.hover {
+	  	color: @light-color;
+	    background: @primary-color + 10%;
+    	text-shadow: none;
+	  }
+
+	  &:active,
+	  &.fc-state-active,
+	  &.active,
+	  .open > .dropdown-toggle& {
+	    color: @light-color;
+	    background: @primary-color + 10%;
+	    box-shadow: none;
+	    text-shadow: none;
+
+	    &:hover,
+	    &:focus,
+	    &.focus {
+	      color: @light-color;
+	      background-color: @primary-color;
+	    }
+	  }
+
+	  &:active,
+	  &.active,
+	  .open > .dropdown-toggle& {
+	    background-image: none;
+	  }
+
+
+	  &.fc-prev-button,
+	  &.fc-next-button {
+			padding-left: 7px;
+			padding-right: 7px;
+	  }
+
+	  &.fc-state-disabled:hover {
+	  	background-color: darken(@light-color, 10%);
+	  	color: hsl(0, 0%, 33%);
+	  }
+
+	  .fc-icon {
+
+	  	&:after {
+	  		position: static;
+	  		font-weight: 400;
+	  		font-size: 21px;
+	  	}
+	  }
+	}
+
+	.fc-state-default {
+		color: @text-color;
+	  border: 0;
+	  border-right: 1px solid rgba(0,0,0,0.1);
+
+		&.fc-corner-left {
+			border-top-left-radius: @btn-border-radius-base;
+    	border-bottom-left-radius: @btn-border-radius-base;
+		}
+
+		&.fc-corner-right {
+			border-right: 0;
+			border-top-right-radius: @btn-border-radius-base;
+    	border-bottom-right-radius: @btn-border-radius-base;
+		}
+	}
+
+	.fc-unthemed .fc-today {
+		background-color: hsl(0, 0%, 97%);
+	}
+
+	@media @phone {
+		max-width: 767px;
+
+	  .fc-toolbar {
+			
+			.fc-left, .fc-center, .fc-right {
+		    text-align: center;
+		    display: block;
+		    width: 100%;
+		  }
+
+		  .fc-left {
+		  	padding-bottom: 20px;
+		  }
+  	
+	  	.fc-center {
+			  padding: 0;
+			}
+		}
+	}
+
+	//External events panel
+	#external-events {
+
+		.external-event {
+			margin: 2px 0;
+		  padding: 5px;
+		  background: @primary-color;
+		  color: @light-color;
+		  font-size: .85em;
+		  cursor: pointer;
+		  display: inline-block;
+		  border-width: 0;
+		}
+
+		p {
+			input {
+				margin-top: 15px;
+			}
+
+			label {
+				font-weight: 300;
+				vertical-align: middle;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{% extends 'mase/blank_dashboard.html' %}
+
+{% block content_title %}
+Mon profil
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <td>Entreprise</td>
+        <td>{{ object.raison_sociale }}</td>
+    </tr>
+    <tr>
+        <td>Siège social</td>
+        <td>{{ object.adresse }}</td>
+    </tr>
+    <tr>
+        <td>E-Mail</td>
+        <td>{{ object.utilisateur.email }}</td>
+    </tr>
+    <tr>
+        <td>Téléphone</td>
+        <td>{{ object.utilisateur.telephone }}</td>
+    </tr>
+</table>
+{% endblock %}

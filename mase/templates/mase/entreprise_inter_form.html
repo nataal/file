@@ -1,0 +1,183 @@
+{% extends 'mase/blank_dashboard.html' %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content_title %} {% endblock %}
+
+{% block css_supp %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<style type="text/css">
+	.select2-container {
+		height: 44px !important;
+	}
+	.select2-container--default .select2-selection--multiple {
+		height: 44px !important;
+		border-color: #eaeaea;
+		border-radius: 0px;
+		cursor: text;
+		border-width: 2px;
+	    box-shadow: none;
+	    padding: 6px 12px;
+	    font-size: 14px;
+	}
+	.select2-container--default .select2-search--inline .select2-search__field{
+		text-align: left !important;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Ajouter une Entreprise Intervenante</h3>
+			</div>
+			<div class="panel-body">
+				{% block form_diff %}
+				<form role="form" class="form-horizontal" action="{% url 'ajouter_entreprise_interv' %}" method="post">{% csrf_token %}
+					{% endblock %}
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Nom</label>
+						<div class="col-sm-10">
+							{% render_field form.raison_sociale class="form-control" placeholder="Raison sociale" %}
+							<span>{{ form.raison_sociale.errors }}</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Adresse</label>
+						<div class="col-sm-10">
+							{% render_field form.adresse class="form-control" placeholder="Adresse" %}
+							<span>{{ form.adresse.errors }}</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							{% render_field form.email placeholder="E-Mail" class="form-control" %}
+							<span>{{ form.email.errors }}</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Téléphone</label>
+						<div class="col-sm-10">
+							{% render_field form.telephone class="form-control" placeholder="Téléphone" %}
+							<span>{{ form.telephone.errors }}</span>
+						</div>
+					</div>
+					{{ entreprise_inter.management_form }}
+					{% if entreprise_inter.errors %}
+					<span>{{ entreprise_inter.errors }}</span>
+					{% endif %}
+					<span>{{ entreprise_inter.non_form_errors }}</span>
+					{% for form in entreprise_inter %}
+					{% if form.id %}
+					{{ form.id }}
+					{% endif %}
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Nom du directeur</label>
+						<div class="col-sm-10">
+							{% render_field form.directeur class="form-control" placeholder="Directeur" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Secteur d'activité</label>
+						<div class="col-sm-10">
+							{% render_field form.activite class="form-control" placeholder="Activité" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Entreprise utilisatrice</label>
+						<div class="col-sm-10">
+							{% render_field form.utilisatrices class="form-control" data-placeholder="Entreprise utilisatrice liée à celle-ci" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Chiffre d'affaires</label>
+						<div class="col-sm-10">
+							{% render_field form.ca class="form-control" placeholder="Chiffres" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Contact pour la démarche</label>
+						<div class="col-sm-10">
+							{% render_field form.contact_demarche class="form-control" placeholder="Contact pour la démarche" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Organisation de l'entreprise</label>
+						<div class="col-sm-10">
+							{% render_field form.organisation class="form-control" placeholder="Organisation" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Relation entre établissements</label>
+						<div class="col-sm-10">
+							{% render_field form.relations_etablissements class="form-control" placeholder="Relations entre établissements" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Activités avec Sous-Traitants</label>
+						<div class="col-sm-10">
+							{% render_field form.sous_traitants_activites class="form-control" placeholder="Activités des sous-traitants" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Intervention des industriels</label>
+						<div class="col-sm-10">
+							{% render_field form.intervention_industriels class="form-control" placeholder="Intervention des industriels" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Période d'audit</label>
+						<div class="col-sm-10">
+							{% render_field form.periode_audit class="form-control" placeholder="Meilleure période pour un audit" %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-6 control-label">Avez-vous une démarche de management qualité ?</label>
+						<div class="col-sm-2">
+							{% render_field form.demarche_management_qualite %}
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-6 control-label">Avez-vous entamé une démarche ISO ?</label>
+						<div class="col-sm-2">
+							{% render_field form.demarche_iso %}
+						</div>
+					</div>
+					{% endfor %}
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="text-inverse">
+								<button type="submit" class="btn btn-space btn-primary">Enregistrer</button>
+								<button class="btn btn-space btn-default">Annuler</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block js_supp %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#id_entreprise_intervenante-0-utilisatrices").select2({
+			width: "100%",
+			allowClear: true,
+			placeholder: "Choisir",
+			language: {
+				noResults: function (params) {
+					return "Aucune entreprise";
+				}
+			}
+		});
+    });
+</script>
+
+{% endblock %}

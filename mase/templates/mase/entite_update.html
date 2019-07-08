@@ -1,0 +1,7 @@
+<h3>Modifier {{ entite.nom }}</h3>
+
+<form action="{% url 'modifier_entite' object.pk %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enregistrer">
+</form>

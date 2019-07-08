@@ -1,0 +1,17 @@
+{% autoescape off %}
+Bonjour {{ user.entite.nom }},
+
+Un compte {{ user.entite.type }} vous a été créé.
+
+Voici les accès :
+
+- Email : {{ user.email }}
+- Mot de passe : {{ password }}
+
+Vous pouvez activer votre compte à partir de ce lien:
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Cordialement,
+L'équipe MASE Sénégal
+{% endautoescape %}

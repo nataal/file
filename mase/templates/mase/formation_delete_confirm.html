@@ -1,0 +1,6 @@
+<form action="{% url 'supprimer_formation' object.uuid %}" method="post">
+    {% csrf_token %}
+    <p>Voulez-vous vraiment supprimer {{ object }}?</p>
+    <input type="submit" value="Confirmer">
+
+</form>

@@ -1,0 +1,5 @@
+export database_name=""
+export database_user=""
+export database_password=""
+export AWS_SES_ACCESS_KEY_ID=""
+export AWS_SES_SECRET_KEY=""

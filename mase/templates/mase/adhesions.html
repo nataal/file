@@ -1,0 +1,372 @@
+{% extends 'mase/blank_site.html' %}
+
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+<!-- Page Title bar -->
+<section class="defult-page-title overlay-black">
+	<div class="container clearfix">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="page-title-box center991">
+					<div class="page-title-content">
+						<h2><span>Adhésions</span></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- About two Start -->
+<section class="about-area-two">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="about-col-two">
+					<h3>Conditions d'adhésion</h3>
+					<p>L’association Mase Sénégal a pour but de promouvoir le développement dans les entreprises extérieures d’un système formalisé de gestion de la sécurité et d’organiser la reconnaissance de ce système au moyen d’une certification unique fondée sur le référentiel “ Mase ” (Manuel d’Amélioration Sécurité, Santé, Hygiène et Environnement Entreprises). </p>
+				</div>
+			</div>
+                <!-- <div class="col-lg-6 col-md-12">
+                    <div class="about-col-two">
+                      <img src="images/about/2.jpg" alt="">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- EU et EI (Accordion) -->
+    <section class="accordion-style-three">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="title">
+    					<h2>Entreprises Adhérentes</h2>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row"> 
+    			<div class="col-md-12 column-margin"> 
+    				<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+    					<div class="panel panel-default">
+    						<div class="panel-heading" role="tab" id="heading-one">
+    							<h4 class="panel-title">
+    								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
+    									Entreprises Utilisatrices
+    								</a>
+    							</h4>
+    						</div>
+    						<div id="collapse-one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-one">
+    							<div class="panel-body">
+									{{ eu|join:", " }}
+								</div>
+    						</div>
+    					</div>
+    					<div class="panel panel-default">
+    						<div class="panel-heading" role="tab" id="heading-two">
+    							<h4 class="panel-title">
+    								<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
+    									Entreprises Intervenantes
+    								</a>
+    							</h4>
+    						</div>
+    						<div id="collapse-two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-two">
+    							<div class="panel-body">
+									{{ ei|join:", " }}
+								</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>   
+    	</div>     
+    </section>
+
+    <!-- Formulaires Tabs-->
+    <section class="tabs-style-four">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="title">
+    					<h2>Formulaires d'adhésion</h2>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-12">
+    				<div>
+    					<!-- Nav tabs -->
+    					<ul class="nav nav-tabs" role="tablist">
+    						<li role="presentation" class="active"><a href="#one-item" aria-controls="one-item" role="tab" data-toggle="tab">Formulaire EU</a></li>
+    						<li role="presentation"><a href="#two-item" aria-controls="two-item" role="tab" data-toggle="tab">Formulaire EI</a></li>
+    					</ul>
+    					<!-- Tab panes -->
+    					<div class="tab-content">
+    						<div role="tabpanel" class="tab-pane fade in active" id="one-item">
+    							Vous pouvez remplir le formulaire suivant ou alors le <a href="{% static 'Demande adhésion Entreprise utilisatrice Mase Sénégal.doc' %}">télécharger</a> et l'envoyer à MASE Sénégal. <br>
+    							<div>
+    								<br><br>
+    								<form action="{% url 'adhesions' %}" method="post"> {% csrf_token %}
+										{{ eu_formset.management_form }}
+										{{ ei_formset.management_form }}
+										{% for form in eu_formset %}
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Raison Sociale</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field eu_form.raison_sociale class="form-control mb-0" placeholder="Raison sociale*" %}
+    										</div>
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Adresse</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field eu_form.adresse class="form-control mb-0" placeholder="Adresse*" %}
+    										</div>
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Activité</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+    											{% render_field form.activite class="form-control mb-0" %}
+    										</div>                                                
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Effectif</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.effectif class="form-control mb-0" placeholder="Effectif*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Chiffre d'affaires</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.ca class="form-control mb-0" placeholder="Chiffre affaires" %}
+    										</div>                                                 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Téléphone</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field eu_form.telephone class="form-control mb-0" placeholder="Tel*" %}
+    										</div>                                                
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>E-mail</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field eu_form.email class="form-control mb-0" placeholder="Enter Email*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Directeur</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.directeur class="form-control mb-0" placeholder="Nom du directeur*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Contact pour la démarche</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.contact_demarche class="form-control mb-0" placeholder="Contact pour la démarche*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-4">
+    										<h4>Montant de la cotisation 2018:  <strong style="color: #0C94B8; ">1 500 000 FCFA</strong></h4>
+    										<br>
+    									</div>
+										{% endfor %}
+    									<button type="submit" class="btn btn-primary my-btn col-lg-offset-6">Adhérer</button>
+    								</form> 
+    							</div>
+    						</div>
+    						<div role="tabpanel" class="tab-pane fade" id="two-item">
+    							Vous pouvez remplir le formulaire suivant ou alors le <a href="{% static 'Demande adhésion Entreprise intervenante MASE Sénégal.doc' %}">télécharger</a> et l'envoyer à MASE Sénégal. 
+    							<div>
+    								<br><br>
+    								<form method="post" action="{% url 'adhesions' %}">{% csrf_token %}
+										{{ ei_formset.management_form }}
+										{{ eu_formset.management_form }}
+										{% for form in ei_formset %}
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Raison Sociale</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field ei_form.raison_sociale class="form-control mb-0" placeholder="Raison sociale*" %}
+    										</div>
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Adresse de l'agence candidate</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field ei_form.adresse class="form-control mb-0" placeholder="Adresse*" %}
+    										</div>
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Téléphone</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field ei_form.telephone class="form-control mb-0" placeholder="Tel*" %}
+    										</div>                                                
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>E-mail</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field ei_form.email class="form-control mb-0" placeholder="Enter Email*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Directeur</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.directeur class="form-control mb-0" placeholder="Directeur*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="col-lg-3">
+    											<label>Contact pour la démarche</label>
+    										</div>
+    										<div class="form-group col-lg-9">
+												{% render_field form.contact_demarche class="form-control mb-0" placeholder="Contact pour la démarche*" %}
+    										</div> 
+    									</div>
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="form-group">
+    											<label>Quelle est l’organisation de votre société ? <span>Direction / agence / établissement régional / local ?</span></label>
+												{% render_field form.organisation class="form-control" %}
+    										</div>
+    									</div>  
+    									<div class="col-lg-8 col-lg-offset-2">
+    										<div class="form-group">
+    											<label>Activités de l’agence candidate ?</label>
+												{% render_field form.activite class="form-control" %}
+    										</div>
+    									</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label>Si plusieurs établissements opèrent dans le pays quelles sont les relations entre eux ? <br>(agences, antennes, centres de travaux…)</label>
+    						{% render_field form.relations_etablissements class="form-control" %}
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label>Quel est l’effectif organique de chacun de vos établissements ?<br>(Préciser impérativement l’effectif de l’agence candidate)</label>
+    						{% render_field form.effectif class="form-control" %}
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label>Utilisez-vous régulièrement des sous-traitants ? Pour quelle part de vos activités ? </label>
+    						{% render_field form.sous_traitants_activites class="form-control" %}
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label>Sur quels sites industriels intervenez-vous habituellement ? précisez le nom des entreprises</label>
+    						{% render_field form.intervention_industriels class="form-control" %}
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label>Quelle(s) société(s) vous a demandé d’engager la démarche Mase ? </label>
+    						{% render_field form.entreprise_utilisatrice class="form-control" %}
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label class="control-label">A quelle période souhaitez-vous être audité ?</label>
+							<div>
+								{% render_field form.periode_audit class="form-control" %}
+							</div>
+    					</div>
+    				</div>
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label class="control-label">Votre entreprise est-elle déjà engagée dans une démarche de management de la sécurité ?</label>
+    						<div>
+    							{% render_field form.demarche_management_qualite class="form-control" %}
+    						</div>
+    					</div>  
+    				</div>
+
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="form-group">
+    						<label class="control-label">Êtes-vous engagé dans une démarche de certification de type ISO ou autre ?</label>
+    						<div>
+    							{% render_field form.demarche_iso class="form-control" %}
+    						</div>
+    					</div>  
+    				</div>
+										{% endfor %}
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<h4>Une demande d’adhésion vaut engagement à fixer l’audit de certification au plus tard au bout de 24 mois.</h4>
+    					<br>
+    				</div>
+
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<h4>Cette demande d’adhésion doit être accompagnée du montant de la cotisation annuelle fixé pour 2018 à <strong style="color: #0C94B8; ">150 000 FCFA</strong></h4>
+    					<br>
+    					<h5>Merci d’établir votre chèque au nom de Mase Sénégal</h5>
+    				</div>
+    				<br>
+    				<button type="submit" class="btn btn-primary my-btn col-lg-offset-6">Adhérer</button>
+    			</form> 
+    		</div>
+    	</div>
+    </div>
+</div>
+</div>
+</div>
+</div>      
+</section> 
+{% endblock %}
+
+{% block js_supp %}
+	<script type="text/javascript">
+		$(function () {
+			$('#li_about').addClass('active');
+		});
+        $('#rad1').on('click', function () {
+            $('#rsecu').show();
+        });
+        $('#rad2').on('click', function() {
+            $('#rsecu').hide();
+        });
+
+        $('#rad3').on('click', function() {
+            $('#norme').show();
+            $('#demarche').show();
+        });
+
+        $('#rad4').on('click', function() {
+            $('#norme').hide();
+            $('#demarche').hide();
+        });
+        $('input[type="checkbox"]').on('change', function() {
+            $('input[type="checkbox"]').not(this).prop('checked', false);
+        });
+	</script>
+{% endblock %}
